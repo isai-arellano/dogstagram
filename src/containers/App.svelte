@@ -6,7 +6,6 @@
     import Sidebar from '../components/Sidebar.svelte';
     import TimeLine from '../components/TimeLine.svelte';
     import Footer from '../components/Footer.svelte';
-    import Profile from '../components/Profile.svelte';
 
     const corsProxy = 'https://thingproxy.freeboard.io/fetch/';
     let data = {};
@@ -16,9 +15,6 @@
         const response = await fetch(corsProxy + API);
         data = await response.json();
     });
-  
-   
-
 </script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
@@ -35,8 +31,6 @@
         padding: 0;
     }
 </style>
-
-
 <Header />
 <Main>
     <TimeLine posts={data.posts}/>
